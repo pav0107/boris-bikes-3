@@ -1,1 +1,5 @@
-A program for managing the Santander cycles aka Boris Bikes
+# Boris bikes: System control
+
+- Added Rspec
+- Added docking station
+- Added bike
