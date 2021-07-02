@@ -13,7 +13,14 @@ class DockingStation
 
   def release_bike
     fail 'No bikes available' if empty?
-    bikes.pop
+    # fail "All bikes are broken" if bikes[-1].broken?
+    # bikes.pop
+    bikes.reverse.each do |bike|
+      unless bike.broken?
+        return bikes.delete(bike)
+      end
+    end
+
   end
 
   def dock(bike)
